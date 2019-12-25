@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-25T04:36:30.650Z</updated>
+  <updated>2019-12-25T10:22:40.771Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&#39;Opencv下载以及环境配置&#39;</title>
+    <link href="http://yoursite.com/2019/12/25/opencv/"/>
+    <id>http://yoursite.com/2019/12/25/opencv/</id>
+    <published>2019-12-25T10:18:30.000Z</published>
+    <updated>2019-12-25T10:22:40.771Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="C:%5CUsers%5CBrian%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191225113638328.png" alt="image-20191225113638328"></p><p>全文图片较多，请在WiFi下阅读，土豪请随意！</p><a id="more"></a><h2 id="一、opencv下载"><a href="#一、opencv下载" class="headerlink" title="一、opencv下载"></a>一、opencv下载</h2><p>  本人是在win10系统下学习的Opencv,所以在这里就只介绍win10系统下opencv的安装。OpenCV是一个开源的计算机视觉库，可以从 <a href="http://opencv.org" target="_blank" rel="noopener">http://opencv.org</a> 获取。</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191224181131554.png" alt="image-20191224181131554" style="zoom: 25%;" /><p>点击release,然后可以根据自己的需要选择版本进行下载</p><p><img src="C:%5CUsers%5CBrian%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191224181333390.png" alt="image-20191224181333390"></p><hr><h2 id="二、系统环境变量配置"><a href="#二、系统环境变量配置" class="headerlink" title="二、系统环境变量配置"></a>二、系统环境变量配置</h2><p>在桌面上右键单击”此电脑”,选择属性</p><p><img src="C:%5CUsers%5CBrian%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191224183626971.png" alt="image-20191224183626971"></p><p>点击“高级系统设置” </p><p><img src="C:%5CUsers%5CBrian%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191224184256947.png" alt="image-20191224184256947"></p><p>选择“环境变量”</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191224184235636.png" alt="image-20191224184235636" style="zoom: 67%;" /><p>双击”Path”</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225095149642.png" alt="image-20191225095149642" style="zoom:50%;" /><p>然后新建opencv文件夹中bin的链接，确认即可。</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225095256881.png" alt="image-20191225095256881" style="zoom:50%;" /><hr><h2 id="三、vs2015中的设置"><a href="#三、vs2015中的设置" class="headerlink" title="三、vs2015中的设置"></a>三、vs2015中的设置</h2><p>ps:因为我的vs2015之前就装好了，vs安装的相关教程各位就自行百度吧，哈哈。</p><p>打开vs2015，新建一个空项目。</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225095821112.png" alt="image-20191225095821112" style="zoom: 33%;" /><p>命名</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225100006027.png" alt="image-20191225100006027" style="zoom:50%;" /><p>点击“下一步”</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225100041132.png" alt="image-20191225100041132" style="zoom: 67%;" /><p>记得勾选“空项目”，随后点击完成即可</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225100131459.png" alt="image-20191225100131459" style="zoom: 67%;" /><p>接下来依次点击“视图”→“其他窗口”→“属性管理器”</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225100524478.png" alt="image-20191225100524478" style="zoom:67%;" /><p>在属性管理器中选择“Debug | x64”，右键选择“属性”。</p><p>(这里解释一下选择debug x64的原因，因为我安装的opencv是64位的，所以选择x64。opencv中有release和debug两个版本，release版本的设置和debug类似，release版本照葫芦画瓢就行啦)</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225100917614.png" alt="image-20191225100917614" style="zoom: 33%;" /><p>选择VC++目录，我们需要修改的是包含目录和库目录，我的已经提前修改过了，所以和各位没设置的话看起来有点不一样，就是黑色加粗的部分。</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225101518657.png" alt="image-20191225101518657" style="zoom: 50%;" /><p>先对包含目录进行修改，点击编辑。</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225101714360.png" alt="image-20191225101714360" style="zoom:50%;" /><p>将你所安装opencv安装的这几个文件夹路径依次添加进去（红色下划线是添加的键），注意：必须是你所安装的路径中的这几个文件夹！</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225101815932.png" alt="image-20191225101815932" style="zoom: 67%;" /><p>点击确定即可。</p><p>接下来添加库目录，操作和上面如出一辙。</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225102211497.png" alt="image-20191225102211497" style="zoom:67%;" /><p>最后，我们还需要对添加附加依赖项，依次选择“链接器”→”输入“→“附加依赖项”，选择编辑。</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225102328010.png" alt="image-20191225102328010" style="zoom: 50%;" /><p>将你所下载版本的opencv的lib对应名字输入即可</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225102623173.png" alt="image-20191225102623173" style="zoom:50%;" /><p>lib的名字可以在以下目录查看。（d代表debug版本，没有d代表release版本，在输入时需要注意一下）</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225102734456.png" alt="image-20191225102734456" style="zoom:50%;" /><p>这一步完成后，opencv的安装以及环境配置算是完成了。</p><h2 id="四、测试"><a href="#四、测试" class="headerlink" title="四、测试"></a>四、测试</h2><p>在解决方案管理器里新建一个源文件</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225103235650.png" alt="image-20191225103235650" style="zoom: 33%;" /><p>调试运行试试看</p><img src="C:\Users\Brian\AppData\Roaming\Typora\typora-user-images\image-20191225103324791.png" alt="image-20191225103324791" style="zoom:50%;" /><p>运行成功，哈哈哈。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;C:%5CUsers%5CBrian%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191225113638328.png&quot; alt=&quot;image-20191225113638328&quot;&gt;&lt;/p&gt;
+&lt;p&gt;全文图片较多，请在WiFi下阅读，土豪请随意！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="图像处理" scheme="http://yoursite.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="Opencv" scheme="http://yoursite.com/tags/Opencv/"/>
+    
+  </entry>
   
   <entry>
     <title>我的第一篇博客文章</title>
