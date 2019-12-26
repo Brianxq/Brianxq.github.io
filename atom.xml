@@ -5,9 +5,9 @@
   <subtitle>Hello World！</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://brianxq.xyz/"/>
   <updated>2019-12-26T08:39:10.513Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://brianxq.xyz/</id>
   
   <author>
     <name>Brianxq</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Opencv下载以及环境配置</title>
-    <link href="http://yoursite.com/2019/12/25/opencv/"/>
-    <id>http://yoursite.com/2019/12/25/opencv/</id>
+    <link href="http://brianxq.xyz/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/opencv"/>
+    <id>http://brianxq.xyz/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/opencv</id>
     <published>2019-12-25T10:18:30.000Z</published>
     <updated>2019-12-26T08:39:10.513Z</updated>
     
@@ -33,10 +33,10 @@
     </summary>
     
     
-      <category term="图像处理" scheme="http://yoursite.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+      <category term="图像处理" scheme="http://brianxq.xyz/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
     
     
-      <category term="Opencv" scheme="http://yoursite.com/tags/Opencv/"/>
+      <category term="Opencv" scheme="http://brianxq.xyz/tags/Opencv/"/>
     
   </entry>
   
