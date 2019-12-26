@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-25T11:37:05.719Z</updated>
+  <updated>2019-12-26T01:38:23.522Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,35 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>&#39;Opencv下载以及环境配置&#39;</title>
-    <link href="http://yoursite.com/2019/12/25/opencv1/"/>
-    <id>http://yoursite.com/2019/12/25/opencv1/</id>
-    <published>2019-12-25T10:18:30.000Z</published>
-    <updated>2019-12-25T11:37:05.719Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/opencv/image-20191225192811331.png" alt="image-20191225192811331"></p><p>全文图片较多，请在WiFi下阅读，土豪请随意！</p><a id="more"></a><h2 id="一、Opencv下载"><a href="#一、Opencv下载" class="headerlink" title="一、Opencv下载"></a>一、Opencv下载</h2><p>  本人是在win10系统下学习的Opencv,所以在这里就只介绍win10系统下opencv的安装。OpenCV是一个开源的计算机视觉库，可以从 <a href="http://opencv.org" target="_blank" rel="noopener">http://opencv.org</a> 获取。</p><p><img src="/images/opencv/image-20191225192901550.png" alt="image-20191225192901550"></p><p>点击release,然后可以根据自己的需要选择版本进行下载安装即可。</p><img src="/images/opencv/image-20191225192931303.png" alt="image-20191225192931303" style="zoom:67%;" /><hr><h2 id="二、系统环境变量配置"><a href="#二、系统环境变量配置" class="headerlink" title="二、系统环境变量配置"></a>二、系统环境变量配置</h2><p>在桌面上右键单击”此电脑”,选择属性</p><p><img src="/images/opencv/image-20191225193125124.png" alt="image-20191225193125124"></p><p>点击“高级系统设置” </p><p><img src="/images/opencv/image-20191225193140546.png" alt="image-20191225193140546"></p><p>选择“环境变量”</p><p><img src="/images/opencv/image-20191225193156318.png" alt="image-20191225193156318"></p><p>双击”Path”</p><p><img src="/images/opencv/image-20191225193212603.png" alt="image-20191225193212603"></p><p>然后新建opencv文件夹中bin的链接，确认即可。</p><p><img src="/images/opencv/image-20191225193238976.png" alt="image-20191225193238976"></p><hr><h2 id="三、vs2015中的设置"><a href="#三、vs2015中的设置" class="headerlink" title="三、vs2015中的设置"></a>三、vs2015中的设置</h2><p>ps:因为我的vs2015之前就装好了，vs安装的相关教程各位就自行百度吧，哈哈。</p><p>打开vs2015，新建一个空项目。</p><p><img src="/images/opencv/image-20191225193300485.png" alt="image-20191225193300485"></p><p>命名</p><p><img src="/images/opencv/image-20191225193315548.png" alt="image-20191225193315548"></p><p>点击“下一步”</p><p><img src="/images/opencv/image-20191225193327824.png" alt="image-20191225193327824"></p><p>记得勾选“空项目”，随后点击完成即可</p><p><img src="/images/opencv/image-20191225193340935.png" alt="image-20191225193340935"></p><p>接下来依次点击“视图”→“其他窗口”→“属性管理器”</p><p><img src="/images/opencv/image-20191225193358849.png" alt="image-20191225193358849"></p><p>在属性管理器中选择“Debug | x64”，右键选择“属性”。</p><p>(这里解释一下选择debug x64的原因，因为我安装的opencv是64位的，所以选择x64。opencv中有release和debug两个版本，release版本的设置和debug类似，release版本照葫芦画瓢就行啦)</p><p><img src="/images/opencv/image-20191225193413729.png" alt="image-20191225193413729"></p><p>选择VC++目录，我们需要修改的是包含目录和库目录，我的已经提前修改过了，所以和各位没设置的话看起来有点不一样，就是黑色加粗的部分。</p><p><img src="/images/opencv/image-20191225193431824.png" alt="image-20191225193431824"></p><p>先对包含目录进行修改，点击编辑。</p><p><img src="/images/opencv/image-20191225193444108.png" alt="image-20191225193444108"></p><p>将你所安装opencv安装的这几个文件夹路径依次添加进去（红色下划线是添加的键），注意：必须是你所安装的路径中的这几个文件夹！</p><p><img src="/images/opencv/image-20191225193518088.png" alt="image-20191225193518088"></p><p>点击确定即可。</p><p>接下来添加库目录，操作和上面如出一辙。</p><p><img src="/images/opencv/image-20191225193531392.png" alt="image-20191225193531392"></p><p>最后，我们还需要对添加附加依赖项，依次选择“链接器”→”输入“→“附加依赖项”，选择编辑。</p><p><img src="/images/opencv/image-20191225193548684.png" alt="image-20191225193548684"></p><p>将你所下载版本的opencv的lib对应名字输入即可</p><p><img src="/images/opencv/image-20191225193602123.png" alt="image-20191225193602123"></p><p>lib的名字可以在以下目录查看。（d代表debug版本，没有d代表release版本，在输入时需要注意一下）</p><p><img src="/images/opencv/image-20191225193629448.png" alt="image-20191225193629448"></p><p>这一步完成后，opencv的安装以及环境配置算是完成了。</p><h2 id="四、测试"><a href="#四、测试" class="headerlink" title="四、测试"></a>四、测试</h2><p>在解决方案管理器里新建一个源文件</p><p><img src="/images/opencv/image-20191225193646073.png" alt="image-20191225193646073"></p><p>调试运行试试看</p><p><img src="/images/opencv/image-20191225193659488.png" alt="image-20191225193659488"></p><p>运行成功，哈哈哈。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/opencv/image-20191225192811331.png&quot; alt=&quot;image-20191225192811331&quot;&gt;&lt;/p&gt;
-&lt;p&gt;全文图片较多，请在WiFi下阅读，土豪请随意！&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="图像处理" scheme="http://yoursite.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
-    
-    
-      <category term="Opencv" scheme="http://yoursite.com/tags/Opencv/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>&#39;Opencv下载以及环境配置&#39;</title>
+    <title>Opencv下载以及环境配置</title>
     <link href="http://yoursite.com/2019/12/25/opencv/"/>
     <id>http://yoursite.com/2019/12/25/opencv/</id>
     <published>2019-12-25T10:18:30.000Z</published>
-    <updated>2019-12-25T11:49:18.394Z</updated>
+    <updated>2019-12-26T01:38:23.522Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/opencv/image-20191225192811331.png" alt="image-20191225192811331"></p><p>全文图片较多，请在WiFi下阅读，土豪请随意！</p><a id="more"></a><h2 id="一、Opencv下载"><a href="#一、Opencv下载" class="headerlink" title="一、Opencv下载"></a>一、Opencv下载</h2><p>  本人是在win10系统下学习的Opencv,所以在这里就只介绍win10系统下opencv的安装。OpenCV是一个开源的计算机视觉库，可以从 <a href="http://opencv.org" target="_blank" rel="noopener">http://opencv.org</a> 获取。</p><p><img src="/images/opencv/image-20191225192901550.png" alt="image-20191225192901550"></p><p>点击release,然后可以根据自己的需要选择版本进行下载安装即可。</p><img src="/images/opencv/image-20191225192931303.png" alt="image-20191225192931303" style="zoom:67%;" /><hr><h2 id="二、系统环境变量配置"><a href="#二、系统环境变量配置" class="headerlink" title="二、系统环境变量配置"></a>二、系统环境变量配置</h2><p>在桌面上右键单击”此电脑”,选择属性</p><p><img src="/images/opencv/image-20191225193125124.png" alt="image-20191225193125124"></p><p>点击“高级系统设置” </p><p><img src="/images/opencv/image-20191225193140546.png" alt="image-20191225193140546"></p><p>选择“环境变量”</p><p><img src="/images/opencv/image-20191225193156318.png" alt="image-20191225193156318"></p><p>双击”Path”</p><p><img src="/images/opencv/image-20191225193212603.png" alt="image-20191225193212603"></p><p>然后新建opencv文件夹中bin的链接，确认即可。</p><p><img src="/images/opencv/image-20191225193238976.png" alt="image-20191225193238976"></p><hr><h2 id="三、vs2015中的设置"><a href="#三、vs2015中的设置" class="headerlink" title="三、vs2015中的设置"></a>三、vs2015中的设置</h2><p>ps:因为我的vs2015之前就装好了，vs安装的相关教程各位就自行百度吧，哈哈。</p><p>打开vs2015，新建一个空项目。</p><p><img src="/images/opencv/image-20191225193300485.png" alt="image-20191225193300485"></p><p>命名</p><p><img src="/images/opencv/image-20191225193315548.png" alt="image-20191225193315548"></p><p>点击“下一步”</p><p><img src="/images/opencv/image-20191225193327824.png" alt="image-20191225193327824"></p><p>记得勾选“空项目”，随后点击完成即可</p><p><img src="/images/opencv/image-20191225193340935.png" alt="image-20191225193340935"></p><p>接下来依次点击“视图”→“其他窗口”→“属性管理器”</p><p><img src="/images/opencv/image-20191225193358849.png" alt="image-20191225193358849"></p><p>在属性管理器中选择“Debug | x64”，右键选择“属性”。</p><p>(这里解释一下选择debug x64的原因，因为我安装的opencv是64位的，所以选择x64。opencv中有release和debug两个版本，release版本的设置和debug类似，release版本照葫芦画瓢就行啦)</p><p><img src="/images/opencv/image-20191225193413729.png" alt="image-20191225193413729"></p><p>选择VC++目录，我们需要修改的是包含目录和库目录，我的已经提前修改过了，所以和各位没设置的话看起来有点不一样，就是黑色加粗的部分。</p><p><img src="/images/opencv/image-20191225193431824.png" alt="image-20191225193431824"></p><p>先对包含目录进行修改，点击编辑。</p><p><img src="/images/opencv/image-20191225193444108.png" alt="image-20191225193444108"></p><p>将你所安装opencv安装的这几个文件夹路径依次添加进去（红色下划线是添加的键），注意：必须是你所安装的路径中的这几个文件夹！</p><p><img src="/images/opencv/image-20191225193518088.png" alt="image-20191225193518088"></p><p>点击确定即可。</p><p>接下来添加库目录，操作和上面如出一辙。</p><p><img src="/images/opencv/image-20191225193531392.png" alt="image-20191225193531392"></p><p>最后，我们还需要对添加附加依赖项，依次选择“链接器”→”输入“→“附加依赖项”，选择编辑。</p><p><img src="/images/opencv/image-20191225193548684.png" alt="image-20191225193548684"></p><p>将你所下载版本的opencv的lib对应名字输入即可</p><p><img src="/images/opencv/image-20191225193602123.png" alt="image-20191225193602123"></p><p>lib的名字可以在以下目录查看。（d代表debug版本，没有d代表release版本，在输入时需要注意一下）</p><p><img src="/images/opencv/image-20191225193629448.png" alt="image-20191225193629448"></p><p>这一步完成后，opencv的安装以及环境配置算是完成了。</p><h2 id="四、测试"><a href="#四、测试" class="headerlink" title="四、测试"></a>四、测试</h2><p>在解决方案管理器里新建一个源文件</p><p><img src="/images/opencv/image-20191225193646073.png" alt="image-20191225193646073"></p><p>调试运行试试看</p><p><img src="/images/opencv/image-20191225193659488.png" alt="image-20191225193659488"></p><p>运行成功，哈哈哈。</p>]]></content>
     
