@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://brianxq.xyz/"/>
-  <updated>2019-12-26T11:24:04.551Z</updated>
+  <updated>2019-12-27T11:52:57.695Z</updated>
   <id>http://brianxq.xyz/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>图像的掩膜处理</title>
+    <link href="http://brianxq.xyz/2019/12/27/opencv3/"/>
+    <id>http://brianxq.xyz/2019/12/27/opencv3/</id>
+    <published>2019-12-27T10:34:13.000Z</published>
+    <updated>2019-12-27T11:52:57.695Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/opencv3/image-20191227183650071.png" alt="image-20191227183650071"></p><p>今天聊聊关于图像掩膜的一些小心得。</p><a id="more"></a><h1 id="一、图像掩膜含义及原理"><a href="#一、图像掩膜含义及原理" class="headerlink" title="一、图像掩膜含义及原理"></a>一、图像掩膜含义及原理</h1><h2 id="1、图像掩膜的含义"><a href="#1、图像掩膜的含义" class="headerlink" title="1、图像掩膜的含义"></a>1、图像掩膜的含义</h2><hr><p>掩膜（Mask也称kernel），图像的掩膜就是在图像处理中一种使用特定物品对某一区域进行掩盖，根据掩膜来重新计算每个像素的像素值，然后达到对某片区域进行特殊处理的操作方式。这种操作方式可以使图片纹理更清晰，从而提高图像的对比度。</p><h2 id="2、Opencv中图像掩膜的原理"><a href="#2、Opencv中图像掩膜的原理" class="headerlink" title="2、Opencv中图像掩膜的原理"></a>2、Opencv中图像掩膜的原理</h2><p>掩膜操作的公式：<img src="/images/opencv3/image-20191227190015308.png" alt="image-20191227190015308"></p><p>我们结合对应图像来进行理解。</p><p><img src="/images/opencv3/image-20191227190112349.png" alt="image-20191227190112349"></p><p>正如上图所示，掩膜操作实际上每次是结合3×3矩阵中的五个点进行处理，从而得出新的像素值。</p><p>假设红色方块(即中心像素)的像素值为a。则通过掩膜处理之后，</p><p>新的像素值A= 五倍的该点原先的像素值 - 与之相邻上面的像素值 - 与之相邻下面的像素值 - 与之相邻左边的像素值 - 与之相邻右边的像素值</p><hr><h1 id="二、图像掩膜操作"><a href="#二、图像掩膜操作" class="headerlink" title="二、图像掩膜操作"></a>二、图像掩膜操作</h1><p>当我们知道图像掩膜的工作原理之后，我们就可以开始对图像进行掩膜处理啦。一般在Opencv中有两种方式可以实现图像掩膜，分别是：通过代码编写或者直接调用Opencv自带的api—filter2D。</p><h2 id="1、代码编写"><a href="#1、代码编写" class="headerlink" title="1、代码编写"></a>1、代码编写</h2><p>  这个方法主要分两步走：1.获取图像像素指针；2.像素范围处理，使得到的像素都在0~255。</p><h3 id="1-1、获取图像像素指针"><a href="#1-1、获取图像像素指针" class="headerlink" title="1.1、获取图像像素指针"></a>1.1、获取图像像素指针</h3><p>图片是通过数字矩阵进行存储的。因此，图像掩膜就是将3×3的矩阵放到一个n×m的图片矩阵中进行掩膜操作，从而改变图片矩阵的像素值，得到新的图片。</p><p><img src="/images/opencv3/image-20191227192330676.png" alt="image-20191227192330676"></p><p>如上图所示，掩膜矩阵是对这个图片矩阵的第 2 行到第 n-1 行、第 2 列到第 m-1 列进行操作(即用红线框出来的范围)。值得注意的是，每一列是有三个通道的(RGB图片是三通道的)，因此，实际上图片的矩阵是m^3列的。如下图所示</p><p><img src="/images/opencv3/20140829171214465.jpg" alt="https://www.chengpengper.cn/wp-content/uploads/20140829171214465.jpg"></p><p>在知道了运行的原理之后，我们就可以开始获取图像的像素指针了。主要用以下几个：</p><p>Mat.ptr<uchar>(int i=0)获取像素矩阵的指针，索引i表示第几行。<br>获得当前行指针const uchar* current=myImage.ptr<uchar>(row);<br>获取当前像素点P(row,col)的像素值p(row,col)=current[col].</p><p>具体代码如下</p><p><img src="/images/opencv3/image-20191227193434664.png" alt="image-20191227193434664"></p><p>其中：</p><p>current[col]即为I(i,j)，即当前行的像素<br>current[col - offsetx]即为I(i,j-1)，当前像素点左边的像素点。减去offsetx的原因是一个像素点有三个通道<br>current[col + offsetx]即为I(i, j+1)<br>previous[col]即为I(i-1, j)即为上一个行的像素点<br>next[col]即为I(i+1, j)即为下一行的像素点</p><h3 id="1-2、像素范围处理"><a href="#1-2、像素范围处理" class="headerlink" title="1.2、像素范围处理"></a>1.2、像素范围处理</h3><p>saturate_cast<uchar>作用是确保RGB的值范围在0~255之间。作用过程如下:</p><p>saturate_cast<uchar>（-100），返回 0。</p><p>saturate_cast<uchar>（288），返回255</p><p>saturate_cast<uchar>（100），返回100</p><h2 id="2、filter2D功能"><a href="#2、filter2D功能" class="headerlink" title="2、filter2D功能"></a>2、filter2D功能</h2><h3 id="2-1、定义掩膜"><a href="#2-1、定义掩膜" class="headerlink" title="2.1、定义掩膜"></a>2.1、定义掩膜</h3><p><img src="/images/opencv3/image-20191227194510850.png" alt="image-20191227194510850"></p><h3 id="2-2、调用filter2D"><a href="#2-2、调用filter2D" class="headerlink" title="2.2、调用filter2D"></a>2.2、调用filter2D</h3><p><img src="/images/opencv3/image-20191227194647056.png" alt="image-20191227194647056"></p><p>其中src与dst是Mat类型变量、src.depth表示位图深度，有32、24、8等。</p><p>实现代码如下：</p><p><img src="/images/opencv3/image-20191227194812949.png" alt="image-20191227194812949"></p><hr><h1 id="三、最终实现效果"><a href="#三、最终实现效果" class="headerlink" title="三、最终实现效果"></a>三、最终实现效果</h1><p><img src="/images/opencv3/image-20191227194932513.png" alt="image-20191227194932513"></p><p>左边是原图，右边是效果图。效果还是相当明显的😄。</p><hr><p><img src="/images/opencv3/image-20191227195250536.png" alt="image-20191227195250536"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/opencv3/image-20191227183650071.png&quot; alt=&quot;image-20191227183650071&quot;&gt;&lt;/p&gt;
+&lt;p&gt;今天聊聊关于图像掩膜的一些小心得。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="图像处理" scheme="http://brianxq.xyz/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="Opencv" scheme="http://brianxq.xyz/tags/Opencv/"/>
+    
+  </entry>
   
   <entry>
     <title>加载、修改、保存图像</title>
