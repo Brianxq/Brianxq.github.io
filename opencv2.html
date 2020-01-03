@@ -46,39 +46,32 @@
   };
 </script>
 
-  <meta name="description" content="Mat对象是啥？？？">
+  <meta name="description" content="这次我们学的是图像的加载、显示、修改和保存。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mat对象">
-<meta property="og:url" content="https://brianxq.xyz/opencv4">
+<meta property="og:title" content="加载、修改、保存图像">
+<meta property="og:url" content="https://brianxq.xyz/opencv2.html">
 <meta property="og:site_name" content="布莱恩の博客">
-<meta property="og:description" content="Mat对象是啥？？？">
+<meta property="og:description" content="这次我们学的是图像的加载、显示、修改和保存。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191230152802796.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191230154226102.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191231172946626.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191231173146419.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191231173318039.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191231182454689.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191231182551170.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191231182643934.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191231184042035.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191231184206747.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191231185601137.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191231185545564.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191231185942665.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191231190030281.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191231190459709.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191231192325718.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191231191215312.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv4/image-20191231192010626.png">
-<meta property="article:published_time" content="2019-12-30T07:26:11.000Z">
-<meta property="article:modified_time" content="2019-12-31T11:28:12.080Z">
+<meta property="og:image" content="https://brianxq.xyz/images/opencv2/image-20191226171951147.png">
+<meta property="og:image" content="https://brianxq.xyz/images/opencv2/image-20191226180114052.png">
+<meta property="og:image" content="https://brianxq.xyz/images/opencv2/image-20191226180452254.png">
+<meta property="og:image" content="https://brianxq.xyz/images/opencv2/image-20191226180518749.png">
+<meta property="og:image" content="https://brianxq.xyz/images/opencv2/image-20191226180810403.png">
+<meta property="og:image" content="https://brianxq.xyz/images/opencv2/image-20191226183203223.png">
+<meta property="og:image" content="https://brianxq.xyz/images/opencv2/image-20191226190422221.png">
+<meta property="og:image" content="https://brianxq.xyz/images/opencv2/image-20191226190051128.png">
+<meta property="og:image" content="https://brianxq.xyz/images/opencv2/image-20191226191010851.png">
+<meta property="og:image" content="https://brianxq.xyz/images/opencv2/image-20191226191234391.png">
+<meta property="og:image" content="https://brianxq.xyz/images/opencv2/image-20191226191636898.png">
+<meta property="article:published_time" content="2019-12-26T09:00:24.000Z">
+<meta property="article:modified_time" content="2019-12-26T11:24:04.551Z">
 <meta property="article:author" content="Brianxq">
 <meta property="article:tag" content="Opencv">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://brianxq.xyz/images/opencv4/image-20191230152802796.png">
+<meta name="twitter:image" content="https://brianxq.xyz/images/opencv2/image-20191226171951147.png">
 
-<link rel="canonical" href="https://brianxq.xyz/opencv4">
+<link rel="canonical" href="https://brianxq.xyz/opencv2.html">
 
 
 <script id="page-configurations">
@@ -90,7 +83,7 @@
   };
 </script>
 
-  <title>Mat对象 | 布莱恩の博客</title>
+  <title>加载、修改、保存图像 | 布莱恩の博客</title>
   
 
 
@@ -201,7 +194,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://brianxq.xyz/opencv4">
+    <link itemprop="mainEntityOfPage" href="https://brianxq.xyz/opencv2.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/spiderman.png">
@@ -214,7 +207,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Mat对象
+          加载、修改、保存图像
         </h1>
 
         <div class="post-meta">
@@ -223,16 +216,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2019-12-30 15:26:11" itemprop="dateCreated datePublished" datetime="2019-12-30T15:26:11+08:00">2019-12-30</time>
+              <time title="创建时间：2019-12-26 17:00:24 / 修改时间：19:24:04" itemprop="dateCreated datePublished" datetime="2019-12-26T17:00:24+08:00">2019-12-26</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-31 19:28:12" itemprop="dateModified" datetime="2019-12-31T19:28:12+08:00">2019-12-31</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -258,7 +245,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>903</span>
+              <span>622</span>
             </span>
 
         </div>
@@ -270,48 +257,41 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="/images/opencv4/image-20191230152802796.png" alt="image-20191230152802796"></p>
-<p>Mat对象是啥？？？</p>
+        <p><img src="/images/opencv2/image-20191226171951147.png" alt="image-20191226171951147"></p>
+<p>这次我们学的是图像的加载、显示、修改和保存。</p>
 <a id="more"></a>
 
-<h1 id="一、Mat对象"><a href="#一、Mat对象" class="headerlink" title="一、Mat对象"></a>一、Mat对象</h1><p>大家如果有看我前几篇博文的话，应该能感觉到Mat对象其实起的是存放数据的作用，它其实是图像加载或读取的内存对象。我们对像素进行处理其实就是通过修改Mat对象实现的。</p>
-<p>每张图片都可以映射为一个Mat结构体，它主要有两部分构成：矩阵头和和一个指向矩阵的指针，前者存放着图片相关的属性信息，后者存放的是每个像素点的数据值。具体形式如下图所示：</p>
-<p><img src="/images/opencv4/image-20191230154226102.png" alt="image-20191230154226102"></p>
-<h1 id="二、Mat对象使用"><a href="#二、Mat对象使用" class="headerlink" title="二、Mat对象使用"></a>二、Mat对象使用</h1><h2 id="1、创建Mat对象"><a href="#1、创建Mat对象" class="headerlink" title="1、创建Mat对象"></a>1、创建Mat对象</h2><h3 id="1-1、Mat数据类型"><a href="#1-1、Mat数据类型" class="headerlink" title="1.1、Mat数据类型"></a>1.1、Mat数据类型</h3><p>在创建Mat的时候，我们需要明确Mat的数据类型，其基本格式为<strong>CV_{8U, 16S, 16U, 32S, 32F, 64F}C{1, 2, 3}</strong> 或者<strong>CV_{8U, 16S, 16U, 32S, 32F, 64F}C(n)</strong>。</p>
-<p>其中U表示无符号数，S表示有符号数，F表示浮点数。8、16、32、64则表示位，而C后的数字则表示的是图像像素的通道数。举个例子：<strong>CV_8UC3 *<em>表示的是  *</em>3通道的8位的无符号整数</strong>。</p>
 <hr>
-<h3 id="1-2、创建方式"><a href="#1-2、创建方式" class="headerlink" title="1.2、创建方式"></a>1.2、创建方式</h3><h4 id="1-2-1、构造函数"><a href="#1-2-1、构造函数" class="headerlink" title="1.2.1、构造函数"></a>1.2.1、构造函数</h4><p><img src="/images/opencv4/image-20191231172946626.png" alt="image-20191231172946626"></p>
-<p>Mat 中的 M1 是你创建Mat对象的名字，3，3，CV_8UC3 则分别代表所创建Mat对象的行、列以及数据类型，Scalar函数是对创造的每个像素点进行颜色赋值。下面的cout函数则是在命令行中将我们所创建的Mat对象输出。代码及输出矩阵显示如下：</p>
-<p><img src="/images/opencv4/image-20191231173146419.png" alt="image-20191231173146419"></p>
-<p><img src="/images/opencv4/image-20191231173318039.png" alt="image-20191231173318039"></p>
-<h4 id="1-2-2、create-函数"><a href="#1-2-2、create-函数" class="headerlink" title="1.2.2、create 函数"></a>1.2.2、create 函数</h4><p><img src="/images/opencv4/image-20191231182454689.png" alt="image-20191231182454689"></p>
-<p>对应参数和构造函数一样，直接上代码和现实效果：</p>
-<p><img src="/images/opencv4/image-20191231182551170.png" alt="image-20191231182551170"></p>
-<p><img src="/images/opencv4/image-20191231182643934.png" alt="image-20191231182643934"></p>
-<p>可以看到，生成了一个 3×3 的纯红色的图片。</p>
+<h3 id="一、加载图像"><a href="#一、加载图像" class="headerlink" title="一、加载图像"></a>一、加载图像</h3><p>加载图像其实就是计算机读取图像的过程，可以用 imread 实现。代码如下图</p>
+<p><img src="/images/opencv2/image-20191226180114052.png" alt="image-20191226180114052"></p>
+<p>括号里面第一项是图片的路径，第二项是图片加载的类型，就是选择把图片变成什么样的类型让计算机读取（PS：如果第二项没写的话，默认是对原图进行加载）。</p>
+<p>有以下三种类型：</p>
+<p>lIMREAD_UNCHANGED 表示加载原图，不做任何改变</p>
+<p>lIMREAD_GRAYSCALE 表示把原图作为灰度图像加载进来</p>
+<p>lIMREAD_COLOR  表示把原图作为RGB图像加载进来</p>
+<p>代码以及代码运行结果：</p>
+<p><img src="/images/opencv2/image-20191226180452254.png" alt="image-20191226180452254"></p>
+<p><img src="/images/opencv2/image-20191226180518749.png" alt="image-20191226180518749"></p>
 <hr>
-<h4 id="1-2-3、opencv自带的类matlab的函数"><a href="#1-2-3、opencv自带的类matlab的函数" class="headerlink" title="1.2.3、opencv自带的类matlab的函数"></a>1.2.3、opencv自带的类matlab的函数</h4><p><img src="/images/opencv4/image-20191231184042035.png" alt="image-20191231184042035"></p>
-<p>ps：将对应代码在源代码中替换就可以，从这里开始就不放源码截图啦。</p>
-<p>以上代码最终展示效果为：</p>
-<p><img src="/images/opencv4/image-20191231184206747.png" alt="image-20191231184206747"></p>
-<h4 id="1-2-4、自定义Mat矩阵"><a href="#1-2-4、自定义Mat矩阵" class="headerlink" title="1.2.4、自定义Mat矩阵"></a>1.2.4、自定义Mat矩阵</h4><p>​     这种方法其实和我们上次说的掩膜操作一样，就是建立一个Mat矩阵。</p>
-<p><img src="/images/opencv4/image-20191231185601137.png" alt="image-20191231185601137"></p>
-<p>生成结果：</p>
-<p><img src="/images/opencv4/image-20191231185545564.png" alt="image-20191231185545564"></p>
-<h2 id="2-Mat的复制"><a href="#2-Mat的复制" class="headerlink" title="2.Mat的复制"></a>2.Mat的复制</h2><h3 id="2-1、clone函数"><a href="#2-1、clone函数" class="headerlink" title="2.1、clone函数"></a>2.1、clone函数</h3><p><img src="/images/opencv4/image-20191231185942665.png" alt="image-20191231185942665"></p>
-<p>运行结果：</p>
-<p><img src="/images/opencv4/image-20191231190030281.png" alt="image-20191231190030281"></p>
+<h3 id="二、显示图像"><a href="#二、显示图像" class="headerlink" title="二、显示图像"></a>二、显示图像</h3><p>显示图像需要用到 namedWindow 和 imshow。代码如下图：</p>
+<p><img src="/images/opencv2/image-20191226180810403.png" alt="image-20191226180810403"></p>
+<p>其中，namedWindow 的功能是创建一个图片显示的窗口，其中的参数 CV_WINDOW_AUTOSIZE 会根据图片的大小对窗口大小自动调整。</p>
+<p>imshow 中的第一个参数是窗口名称，第二个参数是Mat对象。</p>
 <hr>
-<h3 id="2-2-、copyto函数"><a href="#2-2-、copyto函数" class="headerlink" title="2.2 、copyto函数"></a>2.2 、copyto函数</h3><p><img src="/images/opencv4/image-20191231190459709.png" alt="image-20191231190459709"></p>
-<p>​    copyto函数产生的效果和clone函数一样。</p>
-<h2 id="3、访问Mat中的图像像素"><a href="#3、访问Mat中的图像像素" class="headerlink" title="3、访问Mat中的图像像素"></a>3、访问Mat中的图像像素</h2><p>在之前的学习中我们了解到，通过指针，可以快速的定位到图像中的任意一个像素。因此我们可以利用指针实现访问像素的功能。</p>
-<p><img src="/images/opencv4/image-20191231192325718.png" alt="image-20191231192325718"></p>
-<p>将上述代码加入源码中，可以得到如下效果：</p>
-<p><img src="/images/opencv4/image-20191231191215312.png" alt="image-20191231191215312"></p>
+<h3 id="三、修改图像"><a href="#三、修改图像" class="headerlink" title="三、修改图像"></a>三、修改图像</h3><p>修改图像用 cvtColor 实现，它实现的功能是将图像从一个色彩空间转换到另一个色彩空间。</p>
+<p><img src="/images/opencv2/image-20191226183203223.png" alt="image-20191226183203223"></p>
+<p>三个参数分别代表源图像、色彩空间转换之后的图像以及参数表示源和目标色彩空间（如COLOR_BGR2HLS、COLOR_BGR2GRAY等）</p>
+<p>代码和实现效果如下：</p>
+<p><img src="/images/opencv2/image-20191226190422221.png" alt="image-20191226190422221"></p>
+<p><img src="/images/opencv2/image-20191226190051128.png" alt="image-20191226190051128"></p>
 <hr>
-<p>以上就是今天的所有内容了哦，别往下滑啦，真没有了😄。</p>
+<h3 id="四、保存图像"><a href="#四、保存图像" class="headerlink" title="四、保存图像"></a>四、保存图像</h3><p>保存图像顾名思义就是将处理好的图像保存到指定目录路径，我们可以用 imwrite 实现。代码如下：</p>
+<p><img src="/images/opencv2/image-20191226191010851.png" alt="image-20191226191010851"></p>
+<p>其中第一个参数是保存路径，第二个参数是保存对象。</p>
+<p>然后我们就可以看到在指定的文件夹里多了一个新保存的图片。</p>
+<p><img src="/images/opencv2/image-20191226191234391.png" alt="image-20191226191234391"></p>
 <hr>
-<p><img src="/images/opencv4/image-20191231192010626.png" alt="image-20191231192010626"></p>
+<p><img src="/images/opencv2/image-20191226191636898.png" alt="image-20191226191636898"></p>
 
     </div>
 
@@ -359,7 +339,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://brianxq.xyz/opencv4" title="Mat对象">https://brianxq.xyz/opencv4</a>
+    <a href="https://brianxq.xyz/opencv2.html" title="加载、修改、保存图像">https://brianxq.xyz/opencv2.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -379,10 +359,13 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/opencv3" rel="prev" title="图像的掩膜处理">
-      <i class="fa fa-chevron-left"></i> 图像的掩膜处理
+    <a href="/opencv1.html" rel="prev" title="Opencv下载以及环境配置">
+      <i class="fa fa-chevron-left"></i> Opencv下载以及环境配置
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/opencv3.html" rel="next" title="图像的掩膜处理">
+      图像的掩膜处理 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -447,7 +430,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、Mat对象"><span class="nav-text">一、Mat对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、Mat对象使用"><span class="nav-text">二、Mat对象使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、创建Mat对象"><span class="nav-text">1、创建Mat对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1、Mat数据类型"><span class="nav-text">1.1、Mat数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2、创建方式"><span class="nav-text">1.2、创建方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1、构造函数"><span class="nav-text">1.2.1、构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2、create-函数"><span class="nav-text">1.2.2、create 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-3、opencv自带的类matlab的函数"><span class="nav-text">1.2.3、opencv自带的类matlab的函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-4、自定义Mat矩阵"><span class="nav-text">1.2.4、自定义Mat矩阵</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Mat的复制"><span class="nav-text">2.Mat的复制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1、clone函数"><span class="nav-text">2.1、clone函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-、copyto函数"><span class="nav-text">2.2 、copyto函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、访问Mat中的图像像素"><span class="nav-text">3、访问Mat中的图像像素</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、加载图像"><span class="nav-text">一、加载图像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、显示图像"><span class="nav-text">二、显示图像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、修改图像"><span class="nav-text">三、修改图像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、保存图像"><span class="nav-text">四、保存图像</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
