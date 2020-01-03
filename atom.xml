@@ -5,9 +5,9 @@
   <subtitle>Hello World！</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://www.brianxq.xyz/"/>
+  <link href="https://brianxq.xyz/"/>
   <updated>2019-12-31T11:28:12.080Z</updated>
-  <id>https://www.brianxq.xyz/</id>
+  <id>https://brianxq.xyz/</id>
   
   <author>
     <name>Brianxq</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Mat对象</title>
-    <link href="https://www.brianxq.xyz/2019/12/30/opencv4/"/>
-    <id>https://www.brianxq.xyz/2019/12/30/opencv4/</id>
+    <link href="https://brianxq.xyz/2019/12/30/opencv4/"/>
+    <id>https://brianxq.xyz/2019/12/30/opencv4/</id>
     <published>2019-12-30T07:26:11.000Z</published>
     <updated>2019-12-31T11:28:12.080Z</updated>
     
@@ -33,17 +33,17 @@
     </summary>
     
     
-      <category term="图像处理" scheme="https://www.brianxq.xyz/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+      <category term="图像处理" scheme="https://brianxq.xyz/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
     
     
-      <category term="Opencv" scheme="https://www.brianxq.xyz/tags/Opencv/"/>
+      <category term="Opencv" scheme="https://brianxq.xyz/tags/Opencv/"/>
     
   </entry>
   
   <entry>
     <title>图像的掩膜处理</title>
-    <link href="https://www.brianxq.xyz/2019/12/27/opencv3/"/>
-    <id>https://www.brianxq.xyz/2019/12/27/opencv3/</id>
+    <link href="https://brianxq.xyz/2019/12/27/opencv3/"/>
+    <id>https://brianxq.xyz/2019/12/27/opencv3/</id>
     <published>2019-12-27T10:34:13.000Z</published>
     <updated>2019-12-28T06:24:35.476Z</updated>
     
@@ -57,17 +57,17 @@
     </summary>
     
     
-      <category term="图像处理" scheme="https://www.brianxq.xyz/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+      <category term="图像处理" scheme="https://brianxq.xyz/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
     
     
-      <category term="Opencv" scheme="https://www.brianxq.xyz/tags/Opencv/"/>
+      <category term="Opencv" scheme="https://brianxq.xyz/tags/Opencv/"/>
     
   </entry>
   
   <entry>
     <title>加载、修改、保存图像</title>
-    <link href="https://www.brianxq.xyz/2019/12/26/opencv2/"/>
-    <id>https://www.brianxq.xyz/2019/12/26/opencv2/</id>
+    <link href="https://brianxq.xyz/2019/12/26/opencv2/"/>
+    <id>https://brianxq.xyz/2019/12/26/opencv2/</id>
     <published>2019-12-26T09:00:24.000Z</published>
     <updated>2019-12-26T11:24:04.551Z</updated>
     
@@ -81,17 +81,17 @@
     </summary>
     
     
-      <category term="图像处理" scheme="https://www.brianxq.xyz/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+      <category term="图像处理" scheme="https://brianxq.xyz/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
     
     
-      <category term="Opencv" scheme="https://www.brianxq.xyz/tags/Opencv/"/>
+      <category term="Opencv" scheme="https://brianxq.xyz/tags/Opencv/"/>
     
   </entry>
   
   <entry>
     <title>Opencv下载以及环境配置</title>
-    <link href="https://www.brianxq.xyz/2019/12/25/opencv1/"/>
-    <id>https://www.brianxq.xyz/2019/12/25/opencv1/</id>
+    <link href="https://brianxq.xyz/2019/12/25/opencv1/"/>
+    <id>https://brianxq.xyz/2019/12/25/opencv1/</id>
     <published>2019-12-25T10:18:30.000Z</published>
     <updated>2019-12-28T09:40:36.738Z</updated>
     
@@ -105,10 +105,10 @@
     </summary>
     
     
-      <category term="图像处理" scheme="https://www.brianxq.xyz/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+      <category term="图像处理" scheme="https://brianxq.xyz/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
     
     
-      <category term="Opencv" scheme="https://www.brianxq.xyz/tags/Opencv/"/>
+      <category term="Opencv" scheme="https://brianxq.xyz/tags/Opencv/"/>
     
   </entry>
   
