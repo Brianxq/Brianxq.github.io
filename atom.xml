@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://brianxq.xyz/"/>
-  <updated>2020-01-07T09:33:07.899Z</updated>
+  <updated>2020-01-07T09:40:59.959Z</updated>
   <id>https://brianxq.xyz/</id>
   
   <author>
@@ -21,13 +21,14 @@
     <link href="https://brianxq.xyz/%E5%9B%BE%E5%83%8F%E6%93%8D%E4%BD%9C.html"/>
     <id>https://brianxq.xyz/%E5%9B%BE%E5%83%8F%E6%93%8D%E4%BD%9C.html</id>
     <published>2020-01-07T08:17:42.000Z</published>
-    <updated>2020-01-07T09:33:07.899Z</updated>
+    <updated>2020-01-07T09:40:59.959Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/%E5%9B%BE%E5%83%8F%E6%93%8D%E4%BD%9C/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200107163057.gif" alt="微信图片_20200107163057"></p><p>上次学完了Mat对象，今天就让我们通过像素对图像进行操作吧！</p><a id="more"></a><hr><h1 id="一、读写像素"><a href="#一、读写像素" class="headerlink" title="一、读写像素"></a>一、读写像素</h1><h2 id="1-对单通道图像操作"><a href="#1-对单通道图像操作" class="headerlink" title="1. 对单通道图像操作"></a>1. 对单通道图像操作</h2><p>话不多说，先上代码：</p><p><img src="/images/%E5%9B%BE%E5%83%8F%E6%93%8D%E4%BD%9C/image-20200107170229262.png" alt="image-20200107170229262"></p><p><img src="/images/%E5%9B%BE%E5%83%8F%E6%93%8D%E4%BD%9C/image-20200107170252870.png" alt="image-20200107170252870"></p><p>（ps：因为代码实在是越来越多了，所以以后我会尽可能只放核心代码，希望各位理解。）</p><p>上面的代码实现了对图像像素的处理，对灰度图的每一个像素都实现了取反操作，核心原理还是和之前一样：遍历每一个像素点，进行操作。</p><p>下面是效果图：</p><p><img src="/images/%E5%9B%BE%E5%83%8F%E6%93%8D%E4%BD%9C/image-20200107171052290.png" alt="image-20200107171052290"></p><h2 id="2-对多通道图像操作"><a href="#2-对多通道图像操作" class="headerlink" title="2.对多通道图像操作"></a>2.对多通道图像操作</h2><p>正如小标题所言，我们也可以直接对源图像的像素进行操作，下面我以三通道的图像为例进行讲解（pps：实际上就是原图XD）</p><p><img src="/images/%E5%9B%BE%E5%83%8F%E6%93%8D%E4%BD%9C/image-20200107171620907.png" alt="image-20200107171620907"></p><p>这样的代码就可以即对单通道图像进行像素操作，同时也可以对三通道的源图像进行像素操作啦。</p><p>其中，Vec3b对应三通道的顺序是blue、green、red的uchar类型数据。类似的还有Vec3f（对应三通道的float类型数据）等。</p><p>代码效果如下：</p><p><img src="/images/%E5%9B%BE%E5%83%8F%E6%93%8D%E4%BD%9C/image-20200107172730269.png" alt="image-20200107172730269"></p><h1 id="二、修改像素"><a href="#二、修改像素" class="headerlink" title="二、修改像素"></a>二、修改像素</h1><p><img src="/images/%E5%9B%BE%E5%83%8F%E6%93%8D%E4%BD%9C/image-20200107172237720.png" alt="image-20200107172237720"></p><p>参考之前的代码，对以上代码的b、g、r进行修改就可以实现不同的像素效果啦！大家动手试试吧</p><hr><hr><p>我还想往下说，但真的没有啦😂</p><hr><p><img src="/images/%E5%9B%BE%E5%83%8F%E6%93%8D%E4%BD%9C/image-20200107173253823.png" alt="image-20200107173253823"></p>]]></content>
     
     <summary type="html">
     
-      关于opencv的一些图像操作
+      &lt;p&gt;&lt;img src=&quot;/images/%E5%9B%BE%E5%83%8F%E6%93%8D%E4%BD%9C/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200107163057.gif&quot; alt=&quot;微信图片_20200107163057&quot;&gt;&lt;/p&gt;
+&lt;p&gt;上次学完了Mat对象，今天就让我们通过像素对图像进行操作吧！&lt;/p&gt;
     
     </summary>
     
@@ -68,13 +69,14 @@
     <link href="https://brianxq.xyz/%E5%9B%BE%E5%83%8F%E7%9A%84%E6%8E%A9%E8%86%9C%E5%A4%84%E7%90%86.html"/>
     <id>https://brianxq.xyz/%E5%9B%BE%E5%83%8F%E7%9A%84%E6%8E%A9%E8%86%9C%E5%A4%84%E7%90%86.html</id>
     <published>2019-12-27T10:34:13.000Z</published>
-    <updated>2020-01-07T08:22:37.499Z</updated>
+    <updated>2020-01-07T09:41:11.282Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/opencv3/image-20191227183650071.png" alt="image-20191227183650071"></p><p>今天聊聊关于图像掩膜的一些小心得。</p><a id="more"></a><h1 id="一、图像掩膜含义及原理"><a href="#一、图像掩膜含义及原理" class="headerlink" title="一、图像掩膜含义及原理"></a>一、图像掩膜含义及原理</h1><h2 id="1、图像掩膜的含义"><a href="#1、图像掩膜的含义" class="headerlink" title="1、图像掩膜的含义"></a>1、图像掩膜的含义</h2><hr><p>掩膜（Mask也称kernel），图像的掩膜就是在图像处理中一种使用特定物品对某一区域进行掩盖，根据掩膜来重新计算每个像素的像素值，然后达到对某片区域进行特殊处理的操作方式。这种操作方式可以使图片纹理更清晰，从而提高图像的对比度。</p><h2 id="2、Opencv中图像掩膜的原理"><a href="#2、Opencv中图像掩膜的原理" class="headerlink" title="2、Opencv中图像掩膜的原理"></a>2、Opencv中图像掩膜的原理</h2><p>掩膜操作的公式：<img src="/images/opencv3/image-20191227190015308.png" alt="image-20191227190015308"></p><p>我们结合对应图像来进行理解。</p><p><img src="/images/opencv3/image-20191227190112349.png" alt="image-20191227190112349"></p><p>正如上图所示，掩膜操作实际上每次是结合3×3矩阵中的五个点进行处理，从而得出新的像素值。</p><p>假设红色方块(即中心像素)的像素值为a。则通过掩膜处理之后，</p><p>新的像素值A= 五倍的该点原先的像素值 - 与之相邻上面的像素值 - 与之相邻下面的像素值 - 与之相邻左边的像素值 - 与之相邻右边的像素值</p><hr><h1 id="二、图像掩膜操作"><a href="#二、图像掩膜操作" class="headerlink" title="二、图像掩膜操作"></a>二、图像掩膜操作</h1><p>当我们知道图像掩膜的工作原理之后，我们就可以开始对图像进行掩膜处理啦。一般在Opencv中有两种方式可以实现图像掩膜，分别是：通过代码编写或者直接调用Opencv自带的api—filter2D。</p><h2 id="1、代码编写"><a href="#1、代码编写" class="headerlink" title="1、代码编写"></a>1、代码编写</h2><p>  这个方法主要分两步走：1.获取图像像素指针；2.像素范围处理，使得到的像素都在0~255。</p><h3 id="1-1、获取图像像素指针"><a href="#1-1、获取图像像素指针" class="headerlink" title="1.1、获取图像像素指针"></a>1.1、获取图像像素指针</h3><p>图片是通过数字矩阵进行存储的。因此，图像掩膜就是将3×3的矩阵放到一个n×m的图片矩阵中进行掩膜操作，从而改变图片矩阵的像素值，得到新的图片。</p><p><img src="/images/opencv3/image-20191227192330676.png" alt="image-20191227192330676"></p><p>如上图所示，掩膜矩阵是对这个图片矩阵的第 2 行到第 n-1 行、第 2 列到第 m-1 列进行操作(即用红线框出来的范围)。值得注意的是，每一列是有三个通道的(RGB图片是三通道的)。因此，实际上图片的矩阵是m^(3)列的。如下图所示</p><p><img src="/images/opencv3/20140829171214465.jpg" alt="https://www.chengpengper.cn/wp-content/uploads/20140829171214465.jpg"></p><p>在知道了运行的原理之后，我们就可以开始获取图像的像素指针了：</p><p>Mat.ptr<uchar>(int i=0)获取像素矩阵的指针，索引i表示第几行。<br>获得当前行指针const uchar* current=myImage.ptr<uchar>(row);<br>获取当前像素点P(row,col)的像素值p(row,col)=current[col].</p><p>具体代码如下</p><p><img src="/images/opencv3/image-20191227193434664.png" alt="image-20191227193434664"></p><p>其中：</p><p>current[col]即为I(i,j)，即当前行的像素<br>current[col - offsetx]即为I(i,j-1)，当前像素点左边的像素点。减去offsetx的原因是一个像素点有三个通道<br>current[col + offsetx]即为I(i, j+1)<br>previous[col]即为I(i-1, j)即为上一个行的像素点<br>next[col]即为I(i+1, j)即为下一行的像素点</p><h3 id="1-2、像素范围处理"><a href="#1-2、像素范围处理" class="headerlink" title="1.2、像素范围处理"></a>1.2、像素范围处理</h3><p>saturate_cast<uchar>作用是确保RGB的值范围在0~255之间。作用过程如下:</p><p>saturate_cast<uchar>（-100），返回 0。</p><p>saturate_cast<uchar>（288），返回255</p><p>saturate_cast<uchar>（100），返回100</p><h2 id="2、filter2D功能"><a href="#2、filter2D功能" class="headerlink" title="2、filter2D功能"></a>2、filter2D功能</h2><h3 id="2-1、定义掩膜"><a href="#2-1、定义掩膜" class="headerlink" title="2.1、定义掩膜"></a>2.1、定义掩膜</h3><p><img src="/images/opencv3/image-20191227194510850.png" alt="image-20191227194510850"></p><h3 id="2-2、调用filter2D"><a href="#2-2、调用filter2D" class="headerlink" title="2.2、调用filter2D"></a>2.2、调用filter2D</h3><p><img src="/images/opencv3/image-20191227194647056.png" alt="image-20191227194647056"></p><p>其中src与dst是Mat类型变量、src.depth表示位图深度，有32、24、8等。</p><p>实现代码如下：</p><p><img src="/images/opencv3/image-20191227194812949.png" alt="image-20191227194812949"></p><hr><h1 id="三、最终实现效果"><a href="#三、最终实现效果" class="headerlink" title="三、最终实现效果"></a>三、最终实现效果</h1><p><img src="/images/opencv3/image-20191227194932513.png" alt="image-20191227194932513"></p><p>左边是原图，右边是效果图。效果还是相当明显的😄。</p><hr><h1 id="四、参考网址"><a href="#四、参考网址" class="headerlink" title="四、参考网址"></a>四、参考网址</h1><p><a href="https://blog.csdn.net/qq_38316300/article/details/95774309" target="_blank" rel="noopener">https://blog.csdn.net/qq_38316300/article/details/95774309</a></p><hr><p><img src="/images/opencv3/image-20191227195250536.png" alt="image-20191227195250536"></p>]]></content>
     
     <summary type="html">
     
-      关于图像掩膜的一些小心得
+      &lt;p&gt;&lt;img src=&quot;/images/opencv3/image-20191227183650071.png&quot; alt=&quot;image-20191227183650071&quot;&gt;&lt;/p&gt;
+&lt;p&gt;今天聊聊关于图像掩膜的一些小心得。&lt;/p&gt;
     
     </summary>
     
@@ -91,13 +93,14 @@
     <link href="https://brianxq.xyz/%E5%8A%A0%E8%BD%BD%E3%80%81%E4%BF%AE%E6%94%B9%E3%80%81%E4%BF%9D%E5%AD%98%E5%9B%BE%E5%83%8F.html"/>
     <id>https://brianxq.xyz/%E5%8A%A0%E8%BD%BD%E3%80%81%E4%BF%AE%E6%94%B9%E3%80%81%E4%BF%9D%E5%AD%98%E5%9B%BE%E5%83%8F.html</id>
     <published>2019-12-26T09:00:24.000Z</published>
-    <updated>2020-01-07T08:20:36.313Z</updated>
+    <updated>2020-01-07T09:40:49.952Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/opencv2/image-20191226171951147.png" alt="image-20191226171951147"></p><p>这次我们学的是图像的加载、显示、修改和保存。</p><a id="more"></a><hr><h3 id="一、加载图像"><a href="#一、加载图像" class="headerlink" title="一、加载图像"></a>一、加载图像</h3><p>加载图像其实就是计算机读取图像的过程，可以用 imread 实现。代码如下图</p><p><img src="/images/opencv2/image-20191226180114052.png" alt="image-20191226180114052"></p><p>括号里面第一项是图片的路径，第二项是图片加载的类型，就是选择把图片变成什么样的类型让计算机读取（PS：如果第二项没写的话，默认是对原图进行加载）。</p><p>有以下三种类型：</p><p>lIMREAD_UNCHANGED 表示加载原图，不做任何改变</p><p>lIMREAD_GRAYSCALE 表示把原图作为灰度图像加载进来</p><p>lIMREAD_COLOR  表示把原图作为RGB图像加载进来</p><p>代码以及代码运行结果：</p><p><img src="/images/opencv2/image-20191226180452254.png" alt="image-20191226180452254"></p><p><img src="/images/opencv2/image-20191226180518749.png" alt="image-20191226180518749"></p><hr><h3 id="二、显示图像"><a href="#二、显示图像" class="headerlink" title="二、显示图像"></a>二、显示图像</h3><p>显示图像需要用到 namedWindow 和 imshow。代码如下图：</p><p><img src="/images/opencv2/image-20191226180810403.png" alt="image-20191226180810403"></p><p>其中，namedWindow 的功能是创建一个图片显示的窗口，其中的参数 CV_WINDOW_AUTOSIZE 会根据图片的大小对窗口大小自动调整。</p><p>imshow 中的第一个参数是窗口名称，第二个参数是Mat对象。</p><hr><h3 id="三、修改图像"><a href="#三、修改图像" class="headerlink" title="三、修改图像"></a>三、修改图像</h3><p>修改图像用 cvtColor 实现，它实现的功能是将图像从一个色彩空间转换到另一个色彩空间。</p><p><img src="/images/opencv2/image-20191226183203223.png" alt="image-20191226183203223"></p><p>三个参数分别代表源图像、色彩空间转换之后的图像以及参数表示源和目标色彩空间（如COLOR_BGR2HLS、COLOR_BGR2GRAY等）</p><p>代码和实现效果如下：</p><p><img src="/images/opencv2/image-20191226190422221.png" alt="image-20191226190422221"></p><p><img src="/images/opencv2/image-20191226190051128.png" alt="image-20191226190051128"></p><hr><h3 id="四、保存图像"><a href="#四、保存图像" class="headerlink" title="四、保存图像"></a>四、保存图像</h3><p>保存图像顾名思义就是将处理好的图像保存到指定目录路径，我们可以用 imwrite 实现。代码如下：</p><p><img src="/images/opencv2/image-20191226191010851.png" alt="image-20191226191010851"></p><p>其中第一个参数是保存路径，第二个参数是保存对象。</p><p>然后我们就可以看到在指定的文件夹里多了一个新保存的图片。</p><p><img src="/images/opencv2/image-20191226191234391.png" alt="image-20191226191234391"></p><hr><p><img src="/images/opencv2/image-20191226191636898.png" alt="image-20191226191636898"></p>]]></content>
     
     <summary type="html">
     
-      关于opencv的加载、修改、保存图像
+      &lt;p&gt;&lt;img src=&quot;/images/opencv2/image-20191226171951147.png&quot; alt=&quot;image-20191226171951147&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这次我们学的是图像的加载、显示、修改和保存。&lt;/p&gt;
     
     </summary>
     
@@ -114,13 +117,14 @@
     <link href="https://brianxq.xyz/Opencv%E4%B8%8B%E8%BD%BD%E4%BB%A5%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html"/>
     <id>https://brianxq.xyz/Opencv%E4%B8%8B%E8%BD%BD%E4%BB%A5%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html</id>
     <published>2019-12-25T10:18:30.000Z</published>
-    <updated>2020-01-07T08:22:00.412Z</updated>
+    <updated>2020-01-07T09:40:37.936Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/opencv/image-20191225192811331.png" alt="image-20191225192811331"></p><p>全文图片较多，请在WiFi下阅读，土豪请随意！</p><a id="more"></a><h2 id="一、Opencv下载"><a href="#一、Opencv下载" class="headerlink" title="一、Opencv下载"></a>一、Opencv下载</h2><p>  本人是在win10系统下学习的Opencv,所以在这里就只介绍win10系统下opencv的安装。OpenCV是一个开源的计算机视觉库，可以从 <a href="http://opencv.org" target="_blank" rel="noopener">http://opencv.org</a> 获取。</p><p><img src="/images/opencv/image-20191225192901550.png" alt="image-20191225192901550"></p><p>点击release,然后可以根据自己的需要选择版本进行下载安装即可。</p><img src="/images/opencv/image-20191225192931303.png" alt="image-20191225192931303" style="zoom:67%;" /><hr><h2 id="二、系统环境变量配置"><a href="#二、系统环境变量配置" class="headerlink" title="二、系统环境变量配置"></a>二、系统环境变量配置</h2><p>在桌面上右键单击”此电脑”,选择属性</p><p><img src="/images/opencv/image-20191225193125124.png" alt="image-20191225193125124"></p><p>点击“高级系统设置” </p><p><img src="/images/opencv/image-20191225193140546.png" alt="image-20191225193140546"></p><p>选择“环境变量”</p><p><img src="/images/opencv/image-20191225193156318.png" alt="image-20191225193156318"></p><p>双击”Path”</p><p><img src="/images/opencv/image-20191225193212603.png" alt="image-20191225193212603"></p><p>然后新建opencv文件夹中bin的链接，确认即可。</p><p><img src="/images/opencv/image-20191225193238976.png" alt="image-20191225193238976"></p><hr><h2 id="三、vs2015中的设置"><a href="#三、vs2015中的设置" class="headerlink" title="三、vs2015中的设置"></a>三、vs2015中的设置</h2><p>ps:因为我的vs2015之前就装好了，vs安装的相关教程各位就自行百度吧，哈哈。</p><p>打开vs2015，新建一个空项目。</p><p><img src="/images/opencv/image-20191225193300485.png" alt="image-20191225193300485"></p><p>命名</p><p><img src="/images/opencv/image-20191225193315548.png" alt="image-20191225193315548"></p><p>点击“下一步”</p><p><img src="/images/opencv/image-20191225193327824.png" alt="image-20191225193327824"></p><p>记得勾选“空项目”，随后点击完成即可</p><p><img src="/images/opencv/image-20191225193340935.png" alt="image-20191225193340935"></p><p>接下来依次点击“视图”→“其他窗口”→“属性管理器”</p><p><img src="/images/opencv/image-20191225193358849.png" alt="image-20191225193358849"></p><p>在属性管理器中选择“Debug | x64”，右键选择“属性”。</p><p>(这里解释一下选择debug x64的原因，因为我安装的opencv是64位的，所以选择x64。opencv中有release和debug两个版本，release版本的设置和debug类似，release版本照葫芦画瓢就行啦)</p><p><img src="/images/opencv/image-20191225193413729.png" alt="image-20191225193413729"></p><p>选择VC++目录，我们需要修改的是包含目录和库目录，我的已经提前修改过了，所以和各位没设置的话看起来有点不一样，就是黑色加粗的部分。</p><p><img src="/images/opencv/image-20191225193431824.png" alt="image-20191225193431824"></p><p>先对包含目录进行修改，点击编辑。</p><p><img src="/images/opencv/image-20191225193444108.png" alt="image-20191225193444108"></p><p>将你所安装opencv安装的这几个文件夹路径依次添加进去（红色下划线是添加的键），注意：必须是你所安装的路径中的这几个文件夹！</p><p><img src="/images/opencv/image-20191225193518088.png" alt="image-20191225193518088"></p><p>点击确定即可。</p><p>接下来添加库目录，操作和上面如出一辙。</p><p><img src="/images/opencv/image-20191225193531392.png" alt="image-20191225193531392"></p><p>最后，我们还需要对添加附加依赖项，依次选择“链接器”→”输入“→“附加依赖项”，选择编辑。</p><p><img src="/images/opencv/image-20191225193548684.png" alt="image-20191225193548684"></p><p>将你所下载版本的opencv的lib对应名字输入即可</p><p><img src="/images/opencv/image-20191225193602123.png" alt="image-20191225193602123"></p><p>lib的名字可以在以下目录查看。（d代表debug版本，没有d代表release版本，在输入时需要注意一下）</p><p><img src="/images/opencv/image-20191225193629448.png" alt="image-20191225193629448"></p><p>这一步完成后，opencv的安装以及环境配置算是完成了。</p><h2 id="四、测试"><a href="#四、测试" class="headerlink" title="四、测试"></a>四、测试</h2><p>在解决方案管理器里新建一个源文件</p><p><img src="/images/opencv/image-20191225193646073.png" alt="image-20191225193646073"></p><p>调试运行试试看</p><p><img src="/images/opencv/image-20191225193659488.png" alt="image-20191225193659488"></p><p>运行成功，哈哈哈。</p>]]></content>
     
     <summary type="html">
     
-      Opencv3.1.0下载以及环境配置
+      &lt;p&gt;&lt;img src=&quot;/images/opencv/image-20191225192811331.png&quot; alt=&quot;image-20191225192811331&quot;&gt;&lt;/p&gt;
+&lt;p&gt;全文图片较多，请在WiFi下阅读，土豪请随意！&lt;/p&gt;
     
     </summary>
     
