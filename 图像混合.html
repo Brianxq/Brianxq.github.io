@@ -46,32 +46,26 @@
   };
 </script>
 
-  <meta name="description" content="今天聊聊关于图像掩膜的一些小心得。">
+  <meta name="description" content="今天学点有意思的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="图像的掩膜处理">
-<meta property="og:url" content="https://brianxq.xyz/%E5%9B%BE%E5%83%8F%E7%9A%84%E6%8E%A9%E8%86%9C%E5%A4%84%E7%90%86.html">
+<meta property="og:title" content="图像混合">
+<meta property="og:url" content="https://brianxq.xyz/%E5%9B%BE%E5%83%8F%E6%B7%B7%E5%90%88.html">
 <meta property="og:site_name" content="布莱恩の博客">
-<meta property="og:description" content="今天聊聊关于图像掩膜的一些小心得。">
+<meta property="og:description" content="今天学点有意思的">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv3/image-20191227183650071.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv3/image-20191227190015308.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv3/image-20191227190112349.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv3/image-20191227192330676.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv3/20140829171214465.jpg">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv3/image-20191227193434664.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv3/image-20191227194510850.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv3/image-20191227194647056.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv3/image-20191227194812949.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv3/image-20191227194932513.png">
-<meta property="og:image" content="https://brianxq.xyz/images/opencv3/image-20191227195250536.png">
-<meta property="article:published_time" content="2019-12-27T10:34:13.000Z">
-<meta property="article:modified_time" content="2020-01-07T09:41:11.282Z">
+<meta property="og:image" content="https://brianxq.xyz/images/%E5%9B%BE%E5%83%8F%E6%B7%B7%E5%90%88/image-20200109163758813.png">
+<meta property="og:image" content="https://brianxq.xyz/images/%E5%9B%BE%E5%83%8F%E6%B7%B7%E5%90%88/image-20200109155506024.png">
+<meta property="og:image" content="https://brianxq.xyz/images/%E5%9B%BE%E5%83%8F%E6%B7%B7%E5%90%88/image-20200109160435514.png">
+<meta property="og:image" content="https://brianxq.xyz/images/%E5%9B%BE%E5%83%8F%E6%B7%B7%E5%90%88/image-20200109161413500.png">
+<meta property="og:image" content="https://brianxq.xyz/images/%E5%9B%BE%E5%83%8F%E6%B7%B7%E5%90%88/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200109163948.gif">
+<meta property="article:published_time" content="2020-01-09T07:13:29.000Z">
+<meta property="article:modified_time" content="2020-01-09T08:40:56.522Z">
 <meta property="article:author" content="Brianxq">
-<meta property="article:tag" content="图像掩膜">
+<meta property="article:tag" content="图像混合">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://brianxq.xyz/images/opencv3/image-20191227183650071.png">
+<meta name="twitter:image" content="https://brianxq.xyz/images/%E5%9B%BE%E5%83%8F%E6%B7%B7%E5%90%88/image-20200109163758813.png">
 
-<link rel="canonical" href="https://brianxq.xyz/%E5%9B%BE%E5%83%8F%E7%9A%84%E6%8E%A9%E8%86%9C%E5%A4%84%E7%90%86.html">
+<link rel="canonical" href="https://brianxq.xyz/%E5%9B%BE%E5%83%8F%E6%B7%B7%E5%90%88.html">
 
 
 <script id="page-configurations">
@@ -83,7 +77,7 @@
   };
 </script>
 
-  <title>图像的掩膜处理 | 布莱恩の博客</title>
+  <title>图像混合 | 布莱恩の博客</title>
   
 
 
@@ -195,7 +189,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://brianxq.xyz/%E5%9B%BE%E5%83%8F%E7%9A%84%E6%8E%A9%E8%86%9C%E5%A4%84%E7%90%86.html">
+    <link itemprop="mainEntityOfPage" href="https://brianxq.xyz/%E5%9B%BE%E5%83%8F%E6%B7%B7%E5%90%88.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/spiderman.png">
@@ -208,7 +202,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          图像的掩膜处理
+          图像混合
         </h2>
 
         <div class="post-meta">
@@ -217,16 +211,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2019-12-27 18:34:13" itemprop="dateCreated datePublished" datetime="2019-12-27T18:34:13+08:00">2019-12-27</time>
+              <time title="创建时间：2020-01-09 15:13:29 / 修改时间：16:40:56" itemprop="dateCreated datePublished" datetime="2020-01-09T15:13:29+08:00">2020-01-09</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-07 17:41:11" itemprop="dateModified" datetime="2020-01-07T17:41:11+08:00">2020-01-07</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -252,7 +240,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
+              <span>1.4k</span>
             </span>
 
         </div>
@@ -264,47 +252,28 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="/images/opencv3/image-20191227183650071.png" alt="image-20191227183650071"></p>
-<p>今天聊聊关于图像掩膜的一些小心得。</p>
+        <p><img src="/images/%E5%9B%BE%E5%83%8F%E6%B7%B7%E5%90%88/image-20200109163758813.png" alt="image-20200109163758813"></p>
+<p>今天学点有意思的</p>
 <a id="more"></a>
 
-<h1 id="一、图像掩膜含义及原理"><a href="#一、图像掩膜含义及原理" class="headerlink" title="一、图像掩膜含义及原理"></a>一、图像掩膜含义及原理</h1><h2 id="1、图像掩膜的含义"><a href="#1、图像掩膜的含义" class="headerlink" title="1、图像掩膜的含义"></a>1、图像掩膜的含义</h2><hr>
-<p>掩膜（Mask也称kernel），图像的掩膜就是在图像处理中一种使用特定物品对某一区域进行掩盖，根据掩膜来重新计算每个像素的像素值，然后达到对某片区域进行特殊处理的操作方式。这种操作方式可以使图片纹理更清晰，从而提高图像的对比度。</p>
-<h2 id="2、Opencv中图像掩膜的原理"><a href="#2、Opencv中图像掩膜的原理" class="headerlink" title="2、Opencv中图像掩膜的原理"></a>2、Opencv中图像掩膜的原理</h2><p>掩膜操作的公式：<img src="/images/opencv3/image-20191227190015308.png" alt="image-20191227190015308"></p>
-<p>我们结合对应图像来进行理解。</p>
-<p><img src="/images/opencv3/image-20191227190112349.png" alt="image-20191227190112349"></p>
-<p>正如上图所示，掩膜操作实际上每次是结合3×3矩阵中的五个点进行处理，从而得出新的像素值。</p>
-<p>假设红色方块(即中心像素)的像素值为a。则通过掩膜处理之后，</p>
-<p>新的像素值A= 五倍的该点原先的像素值 - 与之相邻上面的像素值 - 与之相邻下面的像素值 - 与之相邻左边的像素值 - 与之相邻右边的像素值</p>
+<h1 id="图像混合"><a href="#图像混合" class="headerlink" title="图像混合"></a>图像混合</h1><h2 id="1-公式说明"><a href="#1-公式说明" class="headerlink" title="1. 公式说明"></a>1. 公式说明</h2><p>图像混合顾名思义就是将两张不同的图像混合在一起，图像混合有加、减、乘、除、比重等方式。</p>
+<p>我们将使用比重公式混合两张图片，其基本原理是将两张图片的每个像素根据公式加权求和，然后得到一个个新的像素点，具体公式如下：</p>
+<p><img src="/images/%E5%9B%BE%E5%83%8F%E6%B7%B7%E5%90%88/image-20200109155506024.png" alt="image-20200109155506024"></p>
+<p>其中α的取值范围为0~1之间。</p>
+<h2 id="2-addWeighted"><a href="#2-addWeighted" class="headerlink" title="2. addWeighted()"></a>2. addWeighted()</h2><p>addWeighted()是Opencv用比重方式混合图像的API，其具体使用如下：</p>
+<p><img src="/images/%E5%9B%BE%E5%83%8F%E6%B7%B7%E5%90%88/image-20200109160435514.png" alt="image-20200109160435514"></p>
+<p>对应参数：输入图像1、图像1的比重、输入图像2、图像2的比重、gamma值(如果混合的图像较暗，可以改变其亮度)、输出混合图像。</p>
+<p>注意：使用addWeighted()时，必须保证两张图片大小和类型一制，否则的话会报错！</p>
 <hr>
-<h1 id="二、图像掩膜操作"><a href="#二、图像掩膜操作" class="headerlink" title="二、图像掩膜操作"></a>二、图像掩膜操作</h1><p>当我们知道图像掩膜的工作原理之后，我们就可以开始对图像进行掩膜处理啦。一般在Opencv中有两种方式可以实现图像掩膜，分别是：通过代码编写或者直接调用Opencv自带的api—filter2D。</p>
-<h2 id="1、代码编写"><a href="#1、代码编写" class="headerlink" title="1、代码编写"></a>1、代码编写</h2><p>  这个方法主要分两步走：1.获取图像像素指针；2.像素范围处理，使得到的像素都在0~255。</p>
-<h3 id="1-1、获取图像像素指针"><a href="#1-1、获取图像像素指针" class="headerlink" title="1.1、获取图像像素指针"></a>1.1、获取图像像素指针</h3><p>图片是通过数字矩阵进行存储的。因此，图像掩膜就是将3×3的矩阵放到一个n×m的图片矩阵中进行掩膜操作，从而改变图片矩阵的像素值，得到新的图片。</p>
-<p><img src="/images/opencv3/image-20191227192330676.png" alt="image-20191227192330676"></p>
-<p>如上图所示，掩膜矩阵是对这个图片矩阵的第 2 行到第 n-1 行、第 2 列到第 m-1 列进行操作(即用红线框出来的范围)。值得注意的是，每一列是有三个通道的(RGB图片是三通道的)。因此，实际上图片的矩阵是m^(3)列的。如下图所示</p>
-<p><img src="/images/opencv3/20140829171214465.jpg" alt="https://www.chengpengper.cn/wp-content/uploads/20140829171214465.jpg"></p>
-<p>在知道了运行的原理之后，我们就可以开始获取图像的像素指针了：</p>
-<p>Mat.ptr<uchar>(int i=0)获取像素矩阵的指针，索引i表示第几行。<br>获得当前行指针const uchar* current=myImage.ptr<uchar>(row);<br>获取当前像素点P(row,col)的像素值p(row,col)=current[col].</p>
-<p>具体代码如下</p>
-<p><img src="/images/opencv3/image-20191227193434664.png" alt="image-20191227193434664"></p>
-<p>其中：</p>
-<p>current[col]即为I(i,j)，即当前行的像素<br>current[col - offsetx]即为I(i,j-1)，当前像素点左边的像素点。减去offsetx的原因是一个像素点有三个通道<br>current[col + offsetx]即为I(i, j+1)<br>previous[col]即为I(i-1, j)即为上一个行的像素点<br>next[col]即为I(i+1, j)即为下一行的像素点</p>
-<h3 id="1-2、像素范围处理"><a href="#1-2、像素范围处理" class="headerlink" title="1.2、像素范围处理"></a>1.2、像素范围处理</h3><p>saturate_cast<uchar>作用是确保RGB的值范围在0~255之间。作用过程如下:</p>
-<p>saturate_cast<uchar>（-100），返回 0。</p>
-<p>saturate_cast<uchar>（288），返回255</p>
-<p>saturate_cast<uchar>（100），返回100</p>
-<h2 id="2、filter2D功能"><a href="#2、filter2D功能" class="headerlink" title="2、filter2D功能"></a>2、filter2D功能</h2><h3 id="2-1、定义掩膜"><a href="#2-1、定义掩膜" class="headerlink" title="2.1、定义掩膜"></a>2.1、定义掩膜</h3><p><img src="/images/opencv3/image-20191227194510850.png" alt="image-20191227194510850"></p>
-<h3 id="2-2、调用filter2D"><a href="#2-2、调用filter2D" class="headerlink" title="2.2、调用filter2D"></a>2.2、调用filter2D</h3><p><img src="/images/opencv3/image-20191227194647056.png" alt="image-20191227194647056"></p>
-<p>其中src与dst是Mat类型变量、src.depth表示位图深度，有32、24、8等。</p>
-<p>实现代码如下：</p>
-<p><img src="/images/opencv3/image-20191227194812949.png" alt="image-20191227194812949"></p>
+<h2 id="3-代码"><a href="#3-代码" class="headerlink" title="3. 代码"></a>3. 代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2\opencv.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span><br><span class="line">	Mat img_1, img_2, dst;</span><br><span class="line">	img_1 = imread(<span class="string">"E:\\Project\\Opencv\\Images\\spiderman_logo.png"</span>);</span><br><span class="line">	img_2 = imread(<span class="string">"E:\\Project\\Opencv\\Images\\spiderman_suit.png"</span>);</span><br><span class="line">	<span class="keyword">if</span> (img_1.empty()) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"could not the spiderman_logo...\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (img_2.empty()) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"could not the spiderman_suit...\n"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	namedWindow(<span class="string">"img_1"</span>, CV_WINDOW_AUTOSIZE);</span><br><span class="line">	imshow(<span class="string">"img_1"</span>, img_1);</span><br><span class="line">	namedWindow(<span class="string">"img_2"</span>, CV_WINDOW_AUTOSIZE);</span><br><span class="line">	imshow(<span class="string">"img_2"</span>, img_2);</span><br><span class="line">	</span><br><span class="line">	resize(img_2, img_2, Size(img_1.cols, img_1.rows)); <span class="comment">//改编图像的大小和类型</span></span><br><span class="line">	<span class="keyword">double</span> alpha = <span class="number">0.5</span>;</span><br><span class="line">	<span class="keyword">if</span>(img_1.rows == img_2.rows &amp;&amp; img_1.cols == img_2.cols &amp;&amp; img_1.type() == img_2.type())&#123;</span><br><span class="line">		addWeighted(img_1, alpha, img_2, (<span class="number">1</span> - alpha), <span class="number">0.0</span>, dst);  <span class="comment">//图像混合</span></span><br><span class="line">		namedWindow(<span class="string">"blend demo"</span>, CV_WINDOW_AUTOSIZE);</span><br><span class="line">		imshow(<span class="string">"blend demo"</span>, dst);  <span class="comment">//显示混合图像</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"could not blend images, the size of images is not same...\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	waitKey(<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>代码运行效果：</p>
+<p><img src="/images/%E5%9B%BE%E5%83%8F%E6%B7%B7%E5%90%88/image-20200109161413500.png" alt="image-20200109161413500"></p>
 <hr>
-<h1 id="三、最终实现效果"><a href="#三、最终实现效果" class="headerlink" title="三、最终实现效果"></a>三、最终实现效果</h1><p><img src="/images/opencv3/image-20191227194932513.png" alt="image-20191227194932513"></p>
-<p>左边是原图，右边是效果图。效果还是相当明显的😄。</p>
-<hr>
-<h1 id="四、参考网址"><a href="#四、参考网址" class="headerlink" title="四、参考网址"></a>四、参考网址</h1><p><a href="https://blog.csdn.net/qq_38316300/article/details/95774309" target="_blank" rel="noopener">https://blog.csdn.net/qq_38316300/article/details/95774309</a></p>
-<hr>
-<p><img src="/images/opencv3/image-20191227195250536.png" alt="image-20191227195250536"></p>
+<p>记得常来这里学习哦</p>
+<p><img src="/images/%E5%9B%BE%E5%83%8F%E6%B7%B7%E5%90%88/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200109163948.gif" alt="微信图片_20200109163948"></p>
 
     </div>
 
@@ -352,7 +321,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://brianxq.xyz/%E5%9B%BE%E5%83%8F%E7%9A%84%E6%8E%A9%E8%86%9C%E5%A4%84%E7%90%86.html" title="图像的掩膜处理">https://brianxq.xyz/图像的掩膜处理.html</a>
+    <a href="https://brianxq.xyz/%E5%9B%BE%E5%83%8F%E6%B7%B7%E5%90%88.html" title="图像混合">https://brianxq.xyz/图像混合.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -372,13 +341,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/%E5%8A%A0%E8%BD%BD%E3%80%81%E4%BF%AE%E6%94%B9%E3%80%81%E4%BF%9D%E5%AD%98%E5%9B%BE%E5%83%8F.html" rel="prev" title="加载、修改、保存图像">
-      <i class="fa fa-chevron-left"></i> 加载、修改、保存图像
+    <a href="/%E5%9B%BE%E5%83%8F%E6%93%8D%E4%BD%9C.html" rel="prev" title="图像操作">
+      <i class="fa fa-chevron-left"></i> 图像操作
     </a></div>
-      <div class="post-nav-item">
-    <a href="/Mat%E5%AF%B9%E8%B1%A1.html" rel="next" title="Mat对象">
-      Mat对象 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -443,7 +409,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、图像掩膜含义及原理"><span class="nav-text">一、图像掩膜含义及原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、图像掩膜的含义"><span class="nav-text">1、图像掩膜的含义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、Opencv中图像掩膜的原理"><span class="nav-text">2、Opencv中图像掩膜的原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、图像掩膜操作"><span class="nav-text">二、图像掩膜操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、代码编写"><span class="nav-text">1、代码编写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1、获取图像像素指针"><span class="nav-text">1.1、获取图像像素指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2、像素范围处理"><span class="nav-text">1.2、像素范围处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、filter2D功能"><span class="nav-text">2、filter2D功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1、定义掩膜"><span class="nav-text">2.1、定义掩膜</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2、调用filter2D"><span class="nav-text">2.2、调用filter2D</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、最终实现效果"><span class="nav-text">三、最终实现效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、参考网址"><span class="nav-text">四、参考网址</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#图像混合"><span class="nav-text">图像混合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-公式说明"><span class="nav-text">1. 公式说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-addWeighted"><span class="nav-text">2. addWeighted()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-代码"><span class="nav-text">3. 代码</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
