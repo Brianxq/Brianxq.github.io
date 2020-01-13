@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/spider-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/spider-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/spider-16x16-next.png">
+  <link rel="mask-icon" href="/images/spider.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://brianxq.xyz').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="快来调整图像亮度与对比度">
+<meta property="og:type" content="article">
+<meta property="og:title" content="调整图像亮度与对比度">
+<meta property="og:url" content="https://brianxq.xyz/%E8%B0%83%E6%95%B4%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%BA%A6%E4%B8%8E%E5%AF%B9%E6%AF%94%E5%BA%A6.html">
+<meta property="og:site_name" content="布莱恩の博客">
+<meta property="og:description" content="快来调整图像亮度与对比度">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://brianxq.xyz/images/%E8%B0%83%E6%95%B4%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%BA%A6%E4%B8%8E%E5%AF%B9%E6%AF%94%E5%BA%A6/image-20200113173420567.png">
+<meta property="og:image" content="https://brianxq.xyz/images/%E8%B0%83%E6%95%B4%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%BA%A6%E4%B8%8E%E5%AF%B9%E6%AF%94%E5%BA%A6/image-20200113165116457.png">
+<meta property="og:image" content="https://brianxq.xyz/images/%E8%B0%83%E6%95%B4%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%BA%A6%E4%B8%8E%E5%AF%B9%E6%AF%94%E5%BA%A6/image-20200113170531126.png">
+<meta property="og:image" content="https://brianxq.xyz/images/%E8%B0%83%E6%95%B4%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%BA%A6%E4%B8%8E%E5%AF%B9%E6%AF%94%E5%BA%A6/image-20200113171254582.png">
+<meta property="og:image" content="https://brianxq.xyz/images/%E8%B0%83%E6%95%B4%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%BA%A6%E4%B8%8E%E5%AF%B9%E6%AF%94%E5%BA%A6/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200113172739.jpg">
+<meta property="article:published_time" content="2020-01-13T08:37:07.000Z">
+<meta property="article:modified_time" content="2020-01-13T09:35:58.315Z">
+<meta property="article:author" content="Brianxq">
+<meta property="article:tag" content="图像混合">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://brianxq.xyz/images/%E8%B0%83%E6%95%B4%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%BA%A6%E4%B8%8E%E5%AF%B9%E6%AF%94%E5%BA%A6/image-20200113173420567.png">
+
+<link rel="canonical" href="https://brianxq.xyz/%E8%B0%83%E6%95%B4%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%BA%A6%E4%B8%8E%E5%AF%B9%E6%AF%94%E5%BA%A6.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>调整图像亮度与对比度 | 布莱恩の博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="布莱恩の博客" type="application/atom+xml">
+</head>
+
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">布莱恩の博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">Hello World！</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">1</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">1</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">7</span></a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://brianxq.xyz/%E8%B0%83%E6%95%B4%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%BA%A6%E4%B8%8E%E5%AF%B9%E6%AF%94%E5%BA%A6.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/spiderman.png">
+      <meta itemprop="name" content="Brianxq">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="布莱恩の博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          调整图像亮度与对比度
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-13 16:37:07 / 修改时间：17:35:58" itemprop="dateCreated datePublished" datetime="2020-01-13T16:37:07+08:00">2020-01-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" itemprop="url" rel="index">
+                    <span itemprop="name">图像处理</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/images/%E8%B0%83%E6%95%B4%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%BA%A6%E4%B8%8E%E5%AF%B9%E6%AF%94%E5%BA%A6/image-20200113173420567.png" alt="image-20200113173420567"></p>
+<p>快来调整图像亮度与对比度</p>
+<a id="more"></a>
+
+
+
+<h1 id="调整图像亮度与对比度"><a href="#调整图像亮度与对比度" class="headerlink" title="调整图像亮度与对比度"></a>调整图像亮度与对比度</h1><hr>
+<h2 id="1、基本原理"><a href="#1、基本原理" class="headerlink" title="1、基本原理"></a>1、基本原理</h2><p>调整图像亮度与对比度仍然是图像的点操作，即对每一个像素重新赋值，从而获得新的图像。公式如下：</p>
+<p><img src="/images/%E8%B0%83%E6%95%B4%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%BA%A6%E4%B8%8E%E5%AF%B9%E6%AF%94%E5%BA%A6/image-20200113165116457.png" alt="image-20200113165116457"></p>
+<p>其中，i 和 j 表示像素位于第 i 行和第 j 列；α (&gt;0) 参数调整图像的对比度，β 参数调整图像的亮度。</p>
+<hr>
+<h2 id="2、代码"><a href="#2、代码" class="headerlink" title="2、代码"></a>2、代码</h2><h3 id="2-1、三通道图像"><a href="#2-1、三通道图像" class="headerlink" title="2.1、三通道图像"></a>2.1、三通道图像</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/opencv.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> **argv)</span> </span>&#123;</span><br><span class="line">	Mat src, dst;</span><br><span class="line">	src = imread(<span class="string">"E:\\Project\\Opencv\\Images\\spiderman_suit.png"</span>);</span><br><span class="line">	<span class="keyword">if</span> (!src.data) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"could not load the image..."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	namedWindow(<span class="string">"input"</span>, CV_WINDOW_AUTOSIZE);</span><br><span class="line">	imshow(<span class="string">"input"</span>, src);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> <span class="built_in">height</span> = src.rows;</span><br><span class="line">	<span class="keyword">int</span> <span class="built_in">width</span> = src.cols;</span><br><span class="line">	dst = Mat::zeros(src.<span class="built_in">size</span>(), src.type());   <span class="comment">//创建一个和原图像大小相同，类型相同，像素值为0的图像</span></span><br><span class="line">	<span class="keyword">float</span> alpha = <span class="number">1.5</span>; <span class="comment">//α对应对比度</span></span><br><span class="line">	<span class="keyword">float</span> beta = <span class="number">10</span>;  <span class="comment">//β对应亮度</span></span><br><span class="line">	</span><br><span class="line">	Mat m1;</span><br><span class="line">	src.convertTo(m1, CV_32F); <span class="comment">//将图像像素转为浮点型</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//对每个像素点的操作</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> row = <span class="number">0</span>; row &lt; <span class="built_in">height</span>; row++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> col = <span class="number">0</span>; col &lt; <span class="built_in">width</span>; col++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (src.channels() == <span class="number">3</span>) &#123;                 <span class="comment">//彩色三通道图像</span></span><br><span class="line">				<span class="keyword">float</span> b = m1.at&lt;Vec3f&gt;(row, col)[<span class="number">0</span>];</span><br><span class="line">				<span class="keyword">float</span> g = m1.at&lt;Vec3f&gt;(row, col)[<span class="number">1</span>];</span><br><span class="line">				<span class="keyword">float</span> r = m1.at&lt;Vec3f&gt;(row, col)[<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">				dst.at&lt;Vec3b&gt;(row, col)[<span class="number">0</span>] = saturate_cast&lt;uchar&gt;(b*alpha + beta); </span><br><span class="line">				dst.at&lt;Vec3b&gt;(row, col)[<span class="number">1</span>] = saturate_cast&lt;uchar&gt;(g*alpha + beta);</span><br><span class="line">				dst.at&lt;Vec3b&gt;(row, col)[<span class="number">2</span>] = saturate_cast&lt;uchar&gt;(r*alpha + beta);</span><br><span class="line">                <span class="comment">//saturate_cast的作用是防止数据溢出</span></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (src.channels() == <span class="number">1</span>) &#123;           <span class="comment">//灰度图像</span></span><br><span class="line">				<span class="keyword">float</span> v = src.at&lt;uchar&gt;(row, col);</span><br><span class="line">				dst.at&lt;uchar&gt;(row, col) = saturate_cast&lt;uchar&gt;(v*alpha + beta);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	namedWindow(<span class="string">"output"</span>, CV_WINDOW_AUTOSIZE);</span><br><span class="line">	imshow(<span class="string">"output"</span>, dst);</span><br><span class="line">	waitKey(<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>显示效果如下：</p>
+<p><img src="/images/%E8%B0%83%E6%95%B4%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%BA%A6%E4%B8%8E%E5%AF%B9%E6%AF%94%E5%BA%A6/image-20200113170531126.png" alt="image-20200113170531126"></p>
+<hr>
+<h3 id="2-2、单通道图像"><a href="#2-2、单通道图像" class="headerlink" title="2.2、单通道图像"></a>2.2、单通道图像</h3><p>将三通道彩色图像转为单通道灰度图，其余和三通道一样。代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/opencv.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> **argv)</span> </span>&#123;</span><br><span class="line">	Mat src, dst;</span><br><span class="line">	src = imread(<span class="string">"E:\\Project\\Opencv\\Images\\spiderman_suit.png"</span>);</span><br><span class="line">	<span class="keyword">if</span> (!src.data) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"could not load the image..."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	cvtColor(src, src, CV_BGR2GRAY);  <span class="comment">//将图像转为单通道的灰度图像</span></span><br><span class="line">	namedWindow(<span class="string">"input"</span>, CV_WINDOW_AUTOSIZE);</span><br><span class="line">	imshow(<span class="string">"input"</span>, src);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> <span class="built_in">height</span> = src.rows;</span><br><span class="line">	<span class="keyword">int</span> <span class="built_in">width</span> = src.cols;</span><br><span class="line">	dst = Mat::zeros(src.<span class="built_in">size</span>(), src.type());  <span class="comment">//创建一个和原图像大小相同，类型相同，像素值为0的图像</span></span><br><span class="line">	<span class="keyword">float</span> alpha = <span class="number">1.5</span>; <span class="comment">//α对应对比度</span></span><br><span class="line">	<span class="keyword">float</span> beta = <span class="number">10</span>;  <span class="comment">//β对应亮度</span></span><br><span class="line">	</span><br><span class="line">	Mat m1;</span><br><span class="line">	src.convertTo(m1, CV_32F); <span class="comment">//将图像像素转为浮点型</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//对每个像素点的操作</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> row = <span class="number">0</span>; row &lt; <span class="built_in">height</span>; row++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> col = <span class="number">0</span>; col &lt; <span class="built_in">width</span>; col++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (src.channels() == <span class="number">3</span>) &#123;                 <span class="comment">//如果是彩色图像</span></span><br><span class="line">				<span class="keyword">float</span> b = m1.at&lt;Vec3f&gt;(row, col)[<span class="number">0</span>];</span><br><span class="line">				<span class="keyword">float</span> g = m1.at&lt;Vec3f&gt;(row, col)[<span class="number">1</span>];</span><br><span class="line">				<span class="keyword">float</span> r = m1.at&lt;Vec3f&gt;(row, col)[<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">				dst.at&lt;Vec3b&gt;(row, col)[<span class="number">0</span>] = saturate_cast&lt;uchar&gt;(b*alpha + beta);   <span class="comment">//saturate_cast的作用是防止数据溢出</span></span><br><span class="line">				dst.at&lt;Vec3b&gt;(row, col)[<span class="number">1</span>] = saturate_cast&lt;uchar&gt;(g*alpha + beta);</span><br><span class="line">				dst.at&lt;Vec3b&gt;(row, col)[<span class="number">2</span>] = saturate_cast&lt;uchar&gt;(r*alpha + beta);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (src.channels() == <span class="number">1</span>) &#123;           <span class="comment">//灰度图像</span></span><br><span class="line">				<span class="keyword">float</span> v = src.at&lt;uchar&gt;(row, col);</span><br><span class="line">				dst.at&lt;uchar&gt;(row, col) = saturate_cast&lt;uchar&gt;(v*alpha + beta);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	namedWindow(<span class="string">"output"</span>, CV_WINDOW_AUTOSIZE);</span><br><span class="line">	imshow(<span class="string">"output"</span>, dst);</span><br><span class="line">	waitKey(<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>显示效果：</p>
+<p><img src="/images/%E8%B0%83%E6%95%B4%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%BA%A6%E4%B8%8E%E5%AF%B9%E6%AF%94%E5%BA%A6/image-20200113171254582.png" alt="image-20200113171254582"></p>
+<p>更多的具体效果大家可以自己调整参数试试看哦。</p>
+<hr>
+<p><img src="/images/%E8%B0%83%E6%95%B4%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%BA%A6%E4%B8%8E%E5%AF%B9%E6%AF%94%E5%BA%A6/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200113172739.jpg" alt="微信图片_20200113172739"></p>
+
+    </div>
+
+    
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+        <div class="reward-container">
+  <div>谢谢你请我吃冰激凌😘</div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="Brianxq 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="Brianxq 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Brianxq
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://brianxq.xyz/%E8%B0%83%E6%95%B4%E5%9B%BE%E5%83%8F%E4%BA%AE%E5%BA%A6%E4%B8%8E%E5%AF%B9%E6%AF%94%E5%BA%A6.html" title="调整图像亮度与对比度">https://brianxq.xyz/调整图像亮度与对比度.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Opencv/" rel="tag"><i class="fa fa-tag"></i># Opencv</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/%E5%9B%BE%E5%83%8F%E6%B7%B7%E5%90%88.html" rel="prev" title="图像混合">
+      <i class="fa fa-chevron-left"></i> 图像混合
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80ODA0MS8yNDUzOA=="></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#调整图像亮度与对比度"><span class="nav-text">调整图像亮度与对比度</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、基本原理"><span class="nav-text">1、基本原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、代码"><span class="nav-text">2、代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1、三通道图像"><span class="nav-text">2.1、三通道图像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2、单通道图像"><span class="nav-text">2.2、单通道图像</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Brianxq"
+      src="/images/spiderman.png">
+  <p class="site-author-name" itemprop="name">Brianxq</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Brianxq" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Brianxq" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/1897742810/home?wvr=5" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;1897742810&#x2F;home?wvr&#x3D;5" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">布莱恩</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">8k</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,0' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+    <script defer src="/lib/three/canvas_lines.min.js"></script>
+    <script defer src="/lib/three/canvas_sphere.min.js"></script>
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+     <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+
+
+  <script src="/live2d-widget/autoload.js"></script>
+  
+
+  
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+
+<!-- 代码块复制功能 -->
+<script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+<script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":200,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
